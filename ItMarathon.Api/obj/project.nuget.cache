@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cNcXFlFc3uI=",
+  "dgSpecHash": "Y1cKD0N/tJk=",
   "success": true,
-  "projectFilePath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Api\\ItMarathon.Api.csproj",
+  "projectFilePath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Api\\ItMarathon.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siros\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\siros\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",

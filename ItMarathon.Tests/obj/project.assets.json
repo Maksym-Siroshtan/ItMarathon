@@ -8729,11 +8729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\ItMarathon.Tests.csproj",
+      "projectUniqueName": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\ItMarathon.Tests.csproj",
       "projectName": "ItMarathon.Tests",
-      "projectPath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\ItMarathon.Tests.csproj",
+      "projectPath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\ItMarathon.Tests.csproj",
       "packagesPath": "C:\\Users\\siros\\.nuget\\packages\\",
-      "outputPath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\obj\\",
+      "outputPath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\siros\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8751,8 +8751,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Api\\ItMarathon.Api.csproj": {
-              "projectPath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Api\\ItMarathon.Api.csproj"
+            "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Api\\ItMarathon.Api.csproj": {
+              "projectPath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Api\\ItMarathon.Api.csproj"
             }
           }
         }

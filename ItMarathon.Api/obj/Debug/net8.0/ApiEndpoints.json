@@ -1,0 +1,245 @@
+[
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.PropertyDefinitionsController",
+    "Method": "GetPropertyDefinitions",
+    "RelativePath": "api/property-definitions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto, ItMarathon.Api, Version=1.0.6.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.PropertyDefinitionsController",
+    "Method": "CreatePropertyDefinition",
+    "RelativePath": "api/property-definitions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "propertyDefinition",
+        "Type": "ItMarathon.Api.Dtos.PropertyDefinitionDtos.CreatePropertyDefinitionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.PropertyDefinitionsController",
+    "Method": "GetPropertyDefinition",
+    "RelativePath": "api/property-definitions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.PropertyDefinitionsController",
+    "Method": "UpdatePropertyDefinition",
+    "RelativePath": "api/property-definitions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "propertyDefinition",
+        "Type": "ItMarathon.Api.Dtos.PropertyDefinitionDtos.UpdatePropertyDefinitionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.PropertyDefinitionsController",
+    "Method": "DeletePropertyDefinition",
+    "RelativePath": "api/property-definitions/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.ProposalsController",
+    "Method": "GetAllProposals",
+    "RelativePath": "api/proposals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "$top",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "$skip",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "$filter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "$orderby",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Dal.Common.DataPage\u00601[[ItMarathon.Api.Dtos.ProposalDtos.ProposalDto, ItMarathon.Api, Version=1.0.6.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.ProposalsController",
+    "Method": "CreateProposal",
+    "RelativePath": "api/proposals",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proposalDto",
+        "Type": "ItMarathon.Api.Dtos.ProposalDtos.ProposalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Api.Dtos.ProposalDtos.ProposalDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.ProposalsController",
+    "Method": "UpdateProposal",
+    "RelativePath": "api/proposals",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "proposalDto",
+        "Type": "ItMarathon.Api.Dtos.ProposalDtos.ProposalDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Api.Dtos.ProposalDtos.ProposalDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.ProposalsController",
+    "Method": "DeleteProposal",
+    "RelativePath": "api/proposals",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ItMarathon.Api.Controllers.ProposalsController",
+    "Method": "GetProposal",
+    "RelativePath": "api/proposals/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ItMarathon.Api.Dtos.ProposalDtos.ProposalDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

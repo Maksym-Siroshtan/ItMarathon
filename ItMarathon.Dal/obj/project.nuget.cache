@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "66RujJMkRTU=",
+  "dgSpecHash": "7ET02irpRb4=",
   "success": true,
-  "projectFilePath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj",
+  "projectFilePath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\siros\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\siros\\.nuget\\packages\\microsoft.aspnetcore.odata\\8.2.5\\microsoft.aspnetcore.odata.8.2.5.nupkg.sha512",

@@ -1,0 +1,884 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ItMarathon.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ItMarathon.Api.Common.Consts">
+            <summary>
+            Provides a storage of constant values used throughout the application.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Consts.Authorization">
+            <summary>
+            Contains constants related to authorization policies and claims.
+            </summary>
+        </member>
+        <member name="F:ItMarathon.Api.Common.Consts.Authorization.SuperUserPolicy">
+            <summary>
+            The name of the policy for users with SuperUser access.
+            </summary>
+        </member>
+        <member name="F:ItMarathon.Api.Common.Consts.Authorization.IsSuperUserClaim">
+            <summary>
+            The claim type used to indicate if a user is a SuperUser.
+            </summary>
+        </member>
+        <member name="F:ItMarathon.Api.Common.Consts.Authorization.UserIdClaim">
+            <summary>
+            The claim type used to store the unique identifier of the user.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Contracts.IAzureBlobService">
+            <summary>
+            Provides functionality to interact with Azure Blob Storage for managing images.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IAzureBlobService.UploadImageAsync(System.String)">
+            <summary>
+            Uploads an image to Azure Blob Storage.
+            </summary>
+            <param name="base64Image">The image content encoded as a base64 string.</param>
+            <returns>A task resulting in the URL at which the uploaded image is accessible.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IAzureBlobService.DeleteImageAsync(System.String)">
+            <summary>
+            Deletes an image from Azure Blob Storage.
+            </summary>
+            <param name="blobUrl">The full URL of the image in Azure Blob Storage to be deleted.</param>
+            <returns>A task representing the asynchronous delete operation.</returns>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Contracts.IPropertyDefinitionService">
+            <summary>
+            Provides functionality to interact with Property Definitions.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IPropertyDefinitionService.GetPropertyDefinitionsAsync">
+            <summary>
+            Retrieves all property definitions.
+            </summary>
+            <returns>A task that contains a collection of property definitions.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IPropertyDefinitionService.GetPropertyDefinitionByIdAsync(System.Int64)">
+            <summary>
+            Retrieves a specific property definition by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the property definition to retrieve.</param>
+            <returns>A task that contains the property definition.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IPropertyDefinitionService.CreatePropertyDefinitionAsync(ItMarathon.Api.Dtos.PropertyDefinitionDtos.CreatePropertyDefinitionDto)">
+            <summary>
+            Creates a new property definition based on the provided data transfer object.
+            </summary>
+            <param name="propertyDefinition">The data transfer object containing
+            the new property definition data.</param>
+            <returns>A task that contains the newly created property definition.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IPropertyDefinitionService.UpdatePropertyDefinitionAsync(System.Int64,ItMarathon.Api.Dtos.PropertyDefinitionDtos.UpdatePropertyDefinitionDto)">
+            <summary>
+            Updates an existing property definition with the new data provided
+            in the data transfer object.
+            </summary>
+            <param name="id">The unique identifier of the property definition to update.</param>
+            <param name="propertyDefinition">The data transfer object
+            containing updated data for the property definition.</param>
+            <returns>A task that contains the updated property definition.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IPropertyDefinitionService.DeletePropertyDefinitionAsync(System.Int64)">
+            <summary>
+            Deletes a property definition identified by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the property definition to be deleted.</param>
+            <returns>A task that contains the deleted property definition.</returns>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Contracts.IProposalService">
+            <summary>
+            Provides functionality to interact with Proposals.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.GetAllProposalsAsync(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Retrieves list of proposals.
+            </summary>
+            <returns>A task that contains a page of proposals.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.GetProposalByIdAsync(System.Int64)">
+            <summary>
+            Retrieves a specific proposal by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the proposal.</param>
+            <returns>A task that returns the requested proposal.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.CreateProposalAsync(ItMarathon.Api.Dtos.ProposalDtos.CreateProposalDto,System.Int64)">
+            <summary>
+            Creates a new proposal based on the provided data transfer object.
+            </summary>
+            <param name="proposalDto">The data transfer object containing
+            the necessary data to create a proposal.</param>
+            <param name="userId">The identifier of the user
+            that creates a proposal</param>
+            <returns>A task that returns the newly created proposal.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.UpdateProposalAsync(System.Int64,ItMarathon.Api.Dtos.ProposalDtos.UpdateProposalDto)">
+            <summary>
+            Updates an existing proposal with data from a provided data transfer object.
+            </summary>
+            <param name="id">The unique identifier of the proposal to update.</param>
+            <param name="proposalDto">The data transfer object
+            containing the updated data for the proposal.</param>
+            <returns>A task that returns the updated proposal.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.DeleteProposalAsync(System.Int64)">
+            <summary>
+            Deletes a proposal by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the proposal to be deleted.</param>
+            <returns>A task that returns the deleted proposal entity.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.ValidateMandatoryPropertyDefinitions(System.Collections.Generic.HashSet{System.Int64},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates whether all mandatory property definitions are present in the provided set of property definition IDs.
+            Adds an error to the <see cref="T:Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary"/> if any mandatory property definitions are missing.
+            </summary>
+            <param name="propertyDefinitionIds">
+            A <see cref="T:System.Collections.Generic.HashSet`1"/> of property definition IDs to validate. 
+            The IDs in this set are compared against the mandatory property definitions to ensure all required properties are included.
+            </param>
+            <param name="modelState">
+            An instance of <see cref="T:Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary"/> where validation errors are added if mandatory property definitions are missing.
+            This parameter is used to record any validation issues encountered during the check.
+            </param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Contracts.IProposalService.ValidatePropertiesAsync``1(System.Collections.Generic.ICollection{``0},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates a collection of properties.
+            </summary>
+            <typeparam name="T">A type that inherits from <see cref="T:ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto"/></typeparam>
+            <param name="propertyDtos">The collection of properties to validate.</param>
+            <param name="modelState">
+            An instance of <see cref="T:Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary"/> where validation errors are added if mandatory property definitions are missing.
+            This parameter is used to record any validation issues encountered during the check.
+            </param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Validators.Base64StringAttribute">
+            <summary>
+            Validation attribute to check if a string is a valid Base64-encoded value.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Validators.Base64StringAttribute.#ctor(System.Boolean)">
+            <summary>
+            Validation attribute to check if a string is a valid Base64-encoded value.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Validators.Base64StringAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Validators.PhotosValidator">
+            <summary>
+            Provides validation for phonos within a proposal.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Validators.PhotosValidator.ValidatePhotosCreating(System.Collections.Generic.IEnumerable{ItMarathon.Api.Dtos.PhotoDtos.CreateProposalPhotoDto},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates a collection of photo DTOs and adds errors to the model state if validation fails on creating.
+            </summary>
+            <param name="photos">The collection of photos to validate. Each photo should be represented by a <see cref="T:ItMarathon.Api.Dtos.PhotoDtos.CreateProposalPhotoDto"/> object.</param>
+            <param name="modelState">The <see cref="T:Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary"/> to which validation errors are added.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Validators.PhotosValidator.ValidatePhotosUpdating(System.Collections.Generic.IEnumerable{ItMarathon.Api.Dtos.PhotoDtos.ProposalPhotoDto},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates a collection of photo DTOs and adds errors to the model state if validation fails on updating.
+            </summary>
+            <param name="photos">The collection of photos to validate. Each photo should be represented by an <see cref="T:ItMarathon.Api.Dtos.PhotoDtos.ProposalPhotoDto"/> object.</param>
+            <param name="modelState">The <see cref="T:Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary"/> to which validation errors are added.</param>
+        </member>
+        <member name="T:ItMarathon.Api.Common.Validators.PropertyValueValidator">
+            <summary>
+            Provides validation for property values within a proposal.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Common.Validators.PropertyValueValidator.ValidateCustomAndPredefinedValues(System.Collections.Generic.IEnumerable{ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validates each property in a proposal to ensure that each has either a predefined value or a custom value, but not both.
+            </summary>
+            <param name="propertyDtos">The collection of properties to validate.</param>
+            <param name="modelState">The model state dictionary where validation errors are added.</param>
+        </member>
+        <member name="T:ItMarathon.Api.Controllers.PropertyDefinitionsController">
+            <summary>
+            Controller for PropertyDefinitions operations.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.PropertyDefinitionsController.#ctor(ItMarathon.Api.Common.Contracts.IPropertyDefinitionService)">
+            <summary>
+            Controller for PropertyDefinitions operations.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.PropertyDefinitionsController.GetPropertyDefinitions">
+            <summary>
+            Get all property definitions.
+            </summary>
+            <returns>A list of property definitions.</returns>
+            <response code="200">Returns a list of all property definitions.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.PropertyDefinitionsController.GetPropertyDefinition(System.Int64)">
+            <summary>
+            Get a specific property definition by ID.
+            </summary>
+            <param name="id">The ID of the property definition to retrieve.</param>
+            <returns>The property definition with the specified ID.</returns>
+            <response code="200">Returns the property definition with the specified ID.</response>
+            <response code="404">If the property definition is not found.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.PropertyDefinitionsController.CreatePropertyDefinition(ItMarathon.Api.Dtos.PropertyDefinitionDtos.CreatePropertyDefinitionDto)">
+            <summary>
+            Create a new property definition.
+            </summary>
+            <param name="propertyDefinition">The property definition to create.</param>
+            <returns>The created property definition.</returns>
+            <response code="201">The property definition was created successfully.</response>
+            <response code="400">If the request is invalid.</response>
+            <response code="401">Unauthorized user cannot create a property definition.</response>
+            <response code="403">Only user with SuperUser permission
+            can create property definition.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.PropertyDefinitionsController.UpdatePropertyDefinition(System.Int64,ItMarathon.Api.Dtos.PropertyDefinitionDtos.UpdatePropertyDefinitionDto)">
+            <summary>
+            Update an existing property definition.
+            </summary>
+            <param name="id">The ID of the property definition to update.</param>
+            <param name="propertyDefinition">The updated property definition.</param>
+            <returns>The updated property definition if the update was successful.</returns>
+            <response code="200">The property definition was updated successfully and the updated entity is returned.</response>
+            <response code="400">If the ID in the request does not match the ID of the property definition.</response>
+            <response code="403">Only user with SuperUser permission
+            can update property definition.</response>
+            <response code="401">Unauthorized user cannot update a property definition.</response>
+            <response code="404">If the property definition is not found.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.PropertyDefinitionsController.DeletePropertyDefinition(System.Int64)">
+            <summary>
+            Delete a property definition by ID.
+            </summary>
+            <param name="id">The ID of the property definition to delete.</param>
+            <returns>No content if the deletion was successful.</returns>
+            <response code="204">The property definition was deleted successfully.</response>
+            <response code="403">Only user with SuperUser permission
+            can delete property definition.</response>
+            <response code="401">Unauthorized user cannot delete a property definition.</response>
+            <response code="404">If the property definition is not found.</response>
+        </member>
+        <member name="T:ItMarathon.Api.Controllers.ProposalsController">
+            <summary>
+            Controller with operations related to proposals.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.ProposalsController.#ctor(ItMarathon.Api.Common.Contracts.IProposalService,AutoMapper.IMapper)">
+            <summary>
+            Controller with operations related to proposals.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.ProposalsController.GetAllProposals(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Retrieves all proposals.
+            </summary>
+            <returns>All Proposals.</returns>
+            <response code="200">Returns all Proposals.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.ProposalsController.GetProposal(System.Int64)">
+            <summary>
+            Get a specific proposal by ID.
+            </summary>
+            <param name="id">The ID of the proposal to retrieve.</param>
+            <returns>The proposal with the specified ID.</returns>
+            <response code="200">Returns the proposal with the specified ID.</response>
+            <response code="404">If the proposal is not found.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.ProposalsController.CreateProposal(ItMarathon.Api.Dtos.ProposalDtos.ProposalDto)">
+            <summary>
+            Creates a new proposal.
+            </summary>
+            <param name="proposalDto">The proposal data transfer object containing
+            the details of the proposal to create.</param>
+            <returns>The created proposal.</returns>
+            <response code="201">Returns the newly created proposal.</response>
+            <response code="400">If the proposal dto contains invalid data and fails to validate; 
+            returns the validation errors.</response>
+            <response code="401">Unauthorized user cannot create a new proposal.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.ProposalsController.UpdateProposal(System.Int64,ItMarathon.Api.Dtos.ProposalDtos.ProposalDto)">
+            <summary>
+            Updates an existing proposal.
+            </summary>
+            <param name="id">The ID of the proposal to update.</param>
+            <param name="proposalDto">The proposal data transfer object containing the updated details.</param>
+            <returns>The updated proposal.</returns>
+            <response code="200">Returns the updated proposal.</response>
+            <response code="400">If the proposal dto contains invalid data and fails to validate; 
+            returns the validation errors.</response>
+            <response code="401">Unauthorized user cannot update a proposal.</response>
+            <response code="403">If user does not have permission to update this proposal.</response>
+            <response code="404">If the proposal is not found.</response>
+        </member>
+        <member name="M:ItMarathon.Api.Controllers.ProposalsController.DeleteProposal(System.Int64)">
+            <summary>
+            Deletes a proposal by its ID.
+            </summary>
+            <param name="id">The ID of the proposal to delete.</param>
+            <returns>An IActionResult indicating the result of the operation.</returns>
+            <response code="204">Indicates that the proposal was successfully deleted.</response>
+            <response code="401">Unauthorized user cannot delete a proposal.</response>
+            <response code="403">If user does not have permission to delete this proposal.</response>
+            <response code="404">If the proposal is not found.</response>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.AppUserDto">
+            <summary>
+            Represents a data transfer object (DTO) for an application user.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.AppUserDto.Id">
+            <summary>
+            Gets or sets the unique identifier for the user.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.AppUserDto.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.AppUserDto.Surname">
+            <summary>
+            Gets or sets the surname of the user.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.AppUserDto.Email">
+            <summary>
+            Gets or sets the email address of the user.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.AppUserDto.PhoneNumber">
+            <summary>
+            Gets or sets the phone number of the user.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.AppUserDto.Location">
+            <summary>
+            Gets or sets the address of the user.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PhotoDtos.CreateProposalPhotoDto">
+            <summary>
+            Represents the data transfer object for creating a proposal photo.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PhotoDtos.CreateProposalPhotoDto.Image">
+            <summary>
+            Gets or sets the Base64 encoded string of the image to be added to a proposal.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PhotoDtos.ProposalPhotoDto">
+            <summary>
+            Represents a data transfer object for a photo associated with a proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PhotoDtos.ProposalPhotoDto.Id">
+            <summary>
+            Gets or sets the unique identifier for the photo.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PhotoDtos.ProposalPhotoDto.Url">
+            <summary>
+            Gets or sets the URL of the photo.
+            This field is required and must be a valid URL format.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PhotoDtos.ProposalPhotoDto.Image">
+            <summary>
+            Gets or sets the Base64 encoded string of the image to be added to a proposal.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.Profiles.AppUserProfile">
+            <summary>
+            Profile configuration for mapping between <see cref="T:ItMarathon.Dal.Entities.AppUser"/> and <see cref="T:ItMarathon.Api.Dtos.AppUserDto"/>.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Dtos.Profiles.AppUserProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ItMarathon.Api.Dtos.Profiles.AppUserProfile"/> class.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.Profiles.PropertyDefinitionProfile">
+            <summary>
+            Profile configuration for mapping between <see cref="T:ItMarathon.Dal.Entities.PropertyDefinition"/> and its related DTOs.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Dtos.Profiles.PropertyDefinitionProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ItMarathon.Api.Dtos.Profiles.PropertyDefinitionProfile"/> class.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.Profiles.PropertyProfile">
+            <summary>
+            Profile configuration for mapping between <see cref="T:ItMarathon.Dal.Entities.Property"/> and <see cref="T:ItMarathon.Api.Dtos.PropertyDtos.PropertyDto"/> 
+            and <see cref="T:ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto"/>.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Dtos.Profiles.PropertyProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ItMarathon.Api.Dtos.Profiles.PropertyProfile"/> class.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.Profiles.PropertyValueProfile">
+            <summary>
+            Profile configuration for mapping between <see cref="T:ItMarathon.Dal.Entities.PropertyValue"/> and its related DTOs.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Dtos.Profiles.PropertyValueProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ItMarathon.Api.Dtos.Profiles.PropertyValueProfile"/> class.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.Handler.ProposalProfile">
+            <summary>
+            Profile configuration for mapping between <see cref="T:ItMarathon.Dal.Entities.Proposal"/> and its related DTOs.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Dtos.Handler.ProposalProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ItMarathon.Api.Dtos.Handler.ProposalProfile"/> class.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDefinitionDtos.BasePropertyDefinitionDto">
+            <summary>
+            Base data transfer object for other property definition dtos.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.BasePropertyDefinitionDto.Name">
+            <summary>
+            Gets or sets the name of the property definition.
+            </summary>
+            <example>Property Name</example>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.BasePropertyDefinitionDto.PropertyDefinitionType">
+            <summary>
+            Gets or sets the type of the property definition.
+            </summary>
+            <example>Predefined</example>
+            <example>Custom</example>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.BasePropertyDefinitionDto.IsMandatory">
+            <summary>
+            Gets or sets a value indicating whether the property is mandatory.
+            </summary>
+            <example>true</example>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.BasePropertyDefinitionDto.Category">
+            <summary>
+            Gets or sets the category for the property definition.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDefinitionDtos.CreatePropertyDefinitionDto">
+            <summary>
+            Represents a Data Transfer Object (DTO) for creating a property definition.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.CreatePropertyDefinitionDto.PropertyValues">
+            <summary>
+            Gets or sets the collection of property values associated with the property definition.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto">
+            <summary>
+            Represents a data transfer object (DTO) for a property definition.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto.Id">
+            <summary>
+            Gets or sets the unique identifier for the property definition.
+            </summary>
+            <example>14</example>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.PropertyDefinitionDto.PropertyValues">
+            <summary>
+            Gets or sets the collection of property values associated with the property definition.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDefinitionDtos.UpdatePropertyDefinitionDto">
+            <summary>
+            Represents a Data Transfer Object (DTO) for updating a property definition.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDefinitionDtos.UpdatePropertyDefinitionDto.PropertyValues">
+            <summary>
+            Gets or sets the collection of property values associated with the property definition.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto">
+            <summary>
+            Data transfer object for property creation.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto.CustomValue">
+            <summary>
+            Gets or sets the custom value of the property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto.PropertyDefinitionId">
+            <summary>
+            Gets or sets the identifier of the property definition associated with this property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.CreatePropertyDto.PredefinedValueId">
+            <summary>
+            Gets or sets the identifier of the predefined value associated with this property.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDtos.PropertyDto">
+            <summary>
+            Data transfer object representing a property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.PropertyDto.Id">
+            <summary>
+            Gets or sets the identifier of the property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.PropertyDto.CustomValue">
+            <summary>
+            Gets or sets the custom value of the property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.PropertyDto.PropertyDefinition">
+            <summary>
+            Gets or sets the property definition associated with this property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.PropertyDto.PredefinedValue">
+            <summary>
+            Gets or sets the predefined value associated with this property.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyDtos.UpdatePropertyDto">
+            <summary>
+            Data transfer object for property update.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyDtos.UpdatePropertyDto.Id">
+            <summary>
+            Gets or sets the identifier of the property.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyValueDtos.CreatePropertyValueDto">
+            <summary>
+            Represents a Data Transfer Object (DTO) for creating a property value.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyValueDtos.CreatePropertyValueDto.Value">
+            <summary>
+            Gets or sets the value of the property.
+            </summary>
+            <example>Example Value</example>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyValueDtos.CreatePropertyValueDto.ParentPropertyValueId">
+            <summary>
+            Gets or sets the optional identifier of the parent property value.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyValueDtos.PropertyValueDto">
+            <summary>
+            Represents a data transfer object (DTO) for a property value.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyValueDtos.PropertyValueDto.Id">
+            <summary>
+            Gets or sets the unique identifier for the property value.
+            </summary>
+            <example>1</example>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyValueDtos.PropertyValueDto.Value">
+            <summary>
+            Gets or sets the value of the property.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyValueDtos.PropertyValueDto.ParentPropertyValue">
+            <summary>
+            Gets or sets the parent property value associated with this property value.
+            This field is optional and can be null.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.PropertyValueDtos.UpdatePropertyValueDto">
+            <summary>
+            Represents a Data Transfer Object (DTO) for updating a property value.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.PropertyValueDtos.UpdatePropertyValueDto.Id">
+            <summary>
+            Gets or sets the unique identifier of the property value.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto">
+            <summary>
+            Base data transfer object for other proposal dtos.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.IsActive">
+            <summary>
+            Gets or sets a value indicating whether the proposal is active.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.PetOrigin">
+            <summary>
+            Gets or sets the origin of the pet in the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.Title">
+            <summary>
+            Gets or sets the title of the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.PetName">
+            <summary>
+            Gets or sets the name of the pet in the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.Price">
+            <summary>
+            Gets or sets the price of the pet in the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.Summary">
+            <summary>
+            Gets or sets the summary of the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.Location">
+            <summary>
+            Gets or sets the location where the pet is available.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.Age">
+            <summary>
+            Gets or sets the age of the pet.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.BaseProposalDto.AgeUnits">
+            <summary>
+            Gets or sets the age units of the pet.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.ProposalDtos.CreateProposalDto">
+            <summary>
+            Data transfer object for proposal creation.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.CreateProposalDto.Photos">
+            <summary>
+            Gets or sets the collection of photos associated with the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.CreateProposalDto.Properties">
+            <summary>
+            Gets or sets the collection of properties associated with the proposal.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto">
+            <summary>
+            Data transfer object for proposal information.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto.Id">
+            <summary>
+            Gets or sets the identifier for the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto.CreatedOn">
+            <summary>
+            Gets or sets the date and time the proposal was created.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto.LastModifiedOn">
+            <summary>
+            Gets or sets the date and time the proposal was last modified.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto.Photos">
+            <summary>
+            Gets or sets the collection of photos associated with the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto.Properties">
+            <summary>
+            Gets or sets the collection of properties associated with the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.ProposalDto.AppUser">
+            <summary>
+            Gets or sets the user associated with the proposal.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Dtos.ProposalDtos.UpdateProposalDto">
+            <summary>
+            Data transfer object for proposal update.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.UpdateProposalDto.Photos">
+            <summary>
+            Gets or sets the collection of photos associated with the proposal.
+            </summary>
+        </member>
+        <member name="P:ItMarathon.Api.Dtos.ProposalDtos.UpdateProposalDto.Properties">
+            <summary>
+            Gets or sets the collection of properties associated with the proposal.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Middlewares.AuthorizationMiddleware">
+            <summary>
+            Middleware to handle authorization, ensuring that
+            users cannot access protected resources without a valid token.
+            </summary>
+            <param name="next">The delegate representing the remaining middleware in the request pipeline.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Middlewares.AuthorizationMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Middleware to handle authorization, ensuring that
+            users cannot access protected resources without a valid token.
+            </summary>
+            <param name="next">The delegate representing the remaining middleware in the request pipeline.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Middlewares.AuthorizationMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,ItMarathon.Dal.Common.Contracts.IUnitOfWork)">
+            <summary>
+            Invokes the middleware asynchronously.
+            </summary>
+            <param name="context">Encapsulates all HTTP-specific information about an individual HTTP request.</param>
+            <param name="unitOfWork">The unit of work and repository pattern utility for database access.</param>
+            <returns>A task that represents the completion of middleware execution.</returns>
+        </member>
+        <member name="T:ItMarathon.Api.Services.PropertyDefinitionService">
+            <summary>
+            Service for managing property definitions.
+            </summary>
+            <param name="unitOfWork">The unit of work managing repository's operations..</param>
+            <param name="mapper">The mapper instance for mapping objects.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Services.PropertyDefinitionService.#ctor(ItMarathon.Dal.Common.Contracts.IUnitOfWork,AutoMapper.IMapper)">
+            <summary>
+            Service for managing property definitions.
+            </summary>
+            <param name="unitOfWork">The unit of work managing repository's operations..</param>
+            <param name="mapper">The mapper instance for mapping objects.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Services.PropertyDefinitionService.GetPropertyDefinitionsAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.PropertyDefinitionService.GetPropertyDefinitionByIdAsync(System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.PropertyDefinitionService.CreatePropertyDefinitionAsync(ItMarathon.Api.Dtos.PropertyDefinitionDtos.CreatePropertyDefinitionDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.PropertyDefinitionService.DeletePropertyDefinitionAsync(System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.PropertyDefinitionService.UpdatePropertyDefinitionAsync(System.Int64,ItMarathon.Api.Dtos.PropertyDefinitionDtos.UpdatePropertyDefinitionDto)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ItMarathon.Api.Services.ProposalService">
+            <summary>
+            Service for managing proposals.
+            </summary>
+            <param name="unitOfWork">The unit of work managing repository's operations.</param>
+            <param name="mapper">The mapper instance for mapping objects.</param>
+            <param name="blobService">The service managing Azure Blob storage operations.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.#ctor(ItMarathon.Dal.Common.Contracts.IUnitOfWork,AutoMapper.IMapper,ItMarathon.Api.Common.Contracts.IAzureBlobService)">
+            <summary>
+            Service for managing proposals.
+            </summary>
+            <param name="unitOfWork">The unit of work managing repository's operations.</param>
+            <param name="mapper">The mapper instance for mapping objects.</param>
+            <param name="blobService">The service managing Azure Blob storage operations.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.GetAllProposalsAsync(Microsoft.AspNetCore.Http.HttpRequest)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.GetProposalByIdAsync(System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.CreateProposalAsync(ItMarathon.Api.Dtos.ProposalDtos.CreateProposalDto,System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.DeleteProposalAsync(System.Int64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.UpdateProposalAsync(System.Int64,ItMarathon.Api.Dtos.ProposalDtos.UpdateProposalDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.ValidateMandatoryPropertyDefinitions(System.Collections.Generic.HashSet{System.Int64},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ItMarathon.Api.Services.ProposalService.ValidatePropertiesAsync``1(System.Collections.Generic.ICollection{``0},Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ItMarathon.Api.Swagger.SwaggerTryItOutDefaultValue">
+            <summary>
+            Swagger schema filter for define a default value for a parameter.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Swagger.SwaggerTryItOutDefaultValue.Apply(Microsoft.OpenApi.Models.OpenApiSchema,Swashbuckle.AspNetCore.SwaggerGen.SchemaFilterContext)">
+            <summary>
+            Apply is called for each parameter
+            </summary>
+            <param name="schema"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ItMarathon.Api.Swagger.SwaggerTryItOutDefaultValueAttribute">
+            <summary>
+            Endpoint parameter attribute for define a default value for Swagger.
+            </summary>
+            <param name="value">Default value to be used in "Try it out" in Swagger.</param>
+        </member>
+        <member name="M:ItMarathon.Api.Swagger.SwaggerTryItOutDefaultValueAttribute.#ctor(System.String)">
+            <summary>
+            Endpoint parameter attribute for define a default value for Swagger.
+            </summary>
+            <param name="value">Default value to be used in "Try it out" in Swagger.</param>
+        </member>
+        <member name="P:ItMarathon.Api.Swagger.SwaggerTryItOutDefaultValueAttribute.Value">
+            <summary>
+            Default value to be used in "Try it out" in Swagger.
+            </summary>
+        </member>
+        <member name="T:ItMarathon.Api.Utilities.AuthUtility">
+            <summary>
+            Provides utility methods for authorization.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Utilities.AuthUtility.GetCurrentUserId(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Retrieves the current user's ID from the HTTP context claims.
+            </summary>
+            <param name="context">The HttpContext which contains the user information.</param>
+            <returns>Returns the user ID from the claims.</returns>
+        </member>
+        <member name="T:ItMarathon.Api.Utilities.ODataUtility">
+            <summary>
+            Provides utility methods for working with OData in the application.
+            </summary>
+        </member>
+        <member name="M:ItMarathon.Api.Utilities.ODataUtility.CreateHttpRequest(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Creates an HttpRequest from HttpRequestMessage.
+            </summary>
+            <param name="requestMessage">The HttpRequestMessage.</param>
+            <returns>The HttpRequest.</returns>
+        </member>
+        <member name="M:ItMarathon.Api.Utilities.ODataUtility.GetEdmModel">
+            <summary>
+            Gets the OData EDM model.
+            </summary>
+            <returns>The IEdmModel.</returns>
+        </member>
+    </members>
+</doc>

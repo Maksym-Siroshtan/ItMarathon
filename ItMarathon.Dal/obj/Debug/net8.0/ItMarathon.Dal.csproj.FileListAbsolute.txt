@@ -1,0 +1,15 @@
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.csproj.AssemblyReference.cache
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.AssemblyInfoInputs.cache
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.AssemblyInfo.cs
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.csproj.CoreCompileInputs.cache
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.sourcelink.json
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\bin\Debug\net8.0\ItMarathon.Dal.deps.json
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\bin\Debug\net8.0\ItMarathon.Dal.runtimeconfig.json
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\bin\Debug\net8.0\ItMarathon.Dal.dll
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\bin\Debug\net8.0\ItMarathon.Dal.pdb
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.dll
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\refint\ItMarathon.Dal.dll
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.pdb
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ItMarathon.Dal.genruntimeconfig.cache
+C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\obj\Debug\net8.0\ref\ItMarathon.Dal.dll

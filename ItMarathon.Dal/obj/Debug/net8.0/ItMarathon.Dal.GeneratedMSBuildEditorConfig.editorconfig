@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ItMarathon.Dal
-build_property.ProjectDir = C:\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\
+build_property.ProjectDir = C:\ItMarathon\it-marathon-v4-net-workshop\it-marathon-v4-net-workshop\ItMarathon\ItMarathon.Dal\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

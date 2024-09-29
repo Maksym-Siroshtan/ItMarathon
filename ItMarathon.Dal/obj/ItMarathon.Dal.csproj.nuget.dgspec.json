@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj": {}
+    "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj": {}
   },
   "projects": {
-    "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj": {
+    "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj",
+        "projectUniqueName": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj",
         "projectName": "ItMarathon.Dal",
-        "projectPath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj",
+        "projectPath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\ItMarathon.Dal.csproj",
         "packagesPath": "C:\\Users\\siros\\.nuget\\packages\\",
-        "outputPath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\obj\\",
+        "outputPath": "C:\\ItMarathon\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\siros\\AppData\\Roaming\\NuGet\\NuGet.Config",

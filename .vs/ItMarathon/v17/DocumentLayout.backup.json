@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6932871E-C36F-48CA-8B96-59F31CA5492E}|ItMarathon.Tests\\ItMarathon.Tests.csproj|c:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\itmarathon\\itmarathon.tests\\daltests\\repositoriestests\\proposalrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6932871E-C36F-48CA-8B96-59F31CA5492E}|ItMarathon.Tests\\ItMarathon.Tests.csproj|solutionrelative:itmarathon.tests\\daltests\\repositoriestests\\proposalrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6932871E-C36F-48CA-8B96-59F31CA5492E}|ItMarathon.Tests\\ItMarathon.Tests.csproj|c:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\itmarathon\\itmarathon.tests\\apitests\\servicestests\\proposalservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6932871E-C36F-48CA-8B96-59F31CA5492E}|ItMarathon.Tests\\ItMarathon.Tests.csproj|solutionrelative:itmarathon.tests\\apitests\\servicestests\\proposalservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE2795AE-1CB5-4D9B-9184-726A1E735656}|ItMarathon.Dal\\ItMarathon.Dal.csproj|c:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\itmarathon\\itmarathon.dal\\repositories\\proposalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE2795AE-1CB5-4D9B-9184-726A1E735656}|ItMarathon.Dal\\ItMarathon.Dal.csproj|solutionrelative:itmarathon.dal\\repositories\\proposalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProposalRepositoryTests.cs",
+              "DocumentMoniker": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\DalTests\\RepositoriesTests\\ProposalRepositoryTests.cs",
+              "RelativeDocumentMoniker": "ItMarathon.Tests\\DalTests\\RepositoriesTests\\ProposalRepositoryTests.cs",
+              "ToolTip": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\DalTests\\RepositoriesTests\\ProposalRepositoryTests.cs",
+              "RelativeToolTip": "ItMarathon.Tests\\DalTests\\RepositoriesTests\\ProposalRepositoryTests.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIA1wBgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T18:14:48.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProposalServiceTests.cs",
+              "DocumentMoniker": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\ApiTests\\ServicesTests\\ProposalServiceTests.cs",
+              "RelativeDocumentMoniker": "ItMarathon.Tests\\ApiTests\\ServicesTests\\ProposalServiceTests.cs",
+              "ToolTip": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Tests\\ApiTests\\ServicesTests\\ProposalServiceTests.cs",
+              "RelativeToolTip": "ItMarathon.Tests\\ApiTests\\ServicesTests\\ProposalServiceTests.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowB8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T18:14:01.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProposalRepository.cs",
+              "DocumentMoniker": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\Repositories\\ProposalRepository.cs",
+              "RelativeDocumentMoniker": "ItMarathon.Dal\\Repositories\\ProposalRepository.cs",
+              "ToolTip": "C:\\it-marathon-v4-net-workshop\\it-marathon-v4-net-workshop\\ItMarathon\\ItMarathon.Dal\\Repositories\\ProposalRepository.cs",
+              "RelativeToolTip": "ItMarathon.Dal\\Repositories\\ProposalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T17:53:48.732Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
